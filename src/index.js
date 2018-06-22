@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import DropDown from './components/drop_down';
+
+const App = () => {
+    return <div>
+        <DropDown title="Choose Draft Year"/>
+    </div>;
+}
+
+ReactDOM.render(<App />, document.querySelector('#root'));
