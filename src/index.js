@@ -13,7 +13,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <DraftYearDropDown title="Choose Draft Year"/>
+                <DraftYearDropDown />
             </div>
         );
     }
