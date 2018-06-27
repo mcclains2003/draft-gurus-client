@@ -10,15 +10,17 @@ class DropDown extends Component{
     render() {
         return (
             <div>
-                <select onChange={ event => console.log(event.target.value) }>
-                    <option value="default">Select a Draft Year</option>
+                <select 
+                    value={ this.state.year }
+                    onChange={ event => this.setState({ year: event.target.value }) }>
+                    <option value="default">Make a Selection</option>
                     <option value="2018">2018</option>
                     <option value="2019">2019</option>
                     <option value="2020">2020</option>
                     <option value="2021">2021</option>
                 </select>
             </div> 
-        )
+        );
     }
 
     // onOptionChange(event) {
