@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 
-import DraftYearDropDown from './components/draft_year_drop_down';
+import DraftYearDropDown from './containers/draft_year_drop_down';
+import reducers from './reducers';
 
 class App extends Component {
     constructor(props) {
@@ -19,4 +22,9 @@ class App extends Component {
     }
 }
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(
+    <Provider store={createStore(reducers)}>
+        <App />
+    </Provider>
+    , document.querySelector('#root')
+);
